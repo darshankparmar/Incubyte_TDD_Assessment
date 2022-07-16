@@ -68,4 +68,11 @@ describe('its working', () => {
         expect(ans).toBe(5);
     })
 
+    // Test 7 : Delimiters can be of any length with the following format: “//[delimiter]\n” for example: “//[***]\n1***2***3” should return 6
+    test('Test 7.1', () => {
+        let ans = -1;
+        ans = Add("//[***]\n1***2***3");
+        expect(ans).toBe(6);
+    })
+
 });
