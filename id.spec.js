@@ -34,4 +34,17 @@ describe('its working', () => {
         expect(ans).toBe(11);
     })
 
+    // Test 3 : Allow the Add method to handle new lines between numbers (instead of commas).
+    test('Test 3.1', () => {
+        let ans = -1;
+        ans = Add("1\n2,3");
+        expect(ans).toBe(6);
+    })
+
+    test('Test 3.2', () => {
+        let ans = -1;
+        ans = Add("1,\n");
+        expect(ans).toBe("The following input is not okay");
+    })
+
 });
