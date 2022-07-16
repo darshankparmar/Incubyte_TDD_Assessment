@@ -1,5 +1,10 @@
 function Add(str) {
     if(str === "") return 0;
+ 
+    // check negative number or not
+    for(let i = 0; i < str.length; i++) {
+        if(str.charAt(i) === '-') return "negative number not allowed";
+    }
     
     if(str.includes("\n,") === true || str.includes(",\n") === true)
         return "The following input is not okay";

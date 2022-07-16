@@ -54,5 +54,13 @@ describe('its working', () => {
         expect(ans).toBe(3);
     })
 
+    // Test 5 : Calling Add with a negative number will throw an exception “negatives not allowed” - and the negative that was passed. 
+    test('Test 5.1', () => {
+        let ans = -1;
+        ans = Add("//;1;2;-1");
+        expect(ans).toBe("negative number not allowed");
+    })
+
     
+
 });
