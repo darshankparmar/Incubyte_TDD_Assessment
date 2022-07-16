@@ -75,4 +75,24 @@ describe('its working', () => {
         expect(ans).toBe(6);
     })
 
+    // Test 8 : Allow multiple delimiters like this: “//[delim1][delim2]\n” 
+    test('Test 8.1', () => {
+        let ans = -1;
+        ans = Add("//[*][%]\n1*2%3");
+        expect(ans).toBe(6);
+    })
+
+    // Test 9 : make sure you can also handle multiple delimiters with length longer than one char
+    test('Test 9.1', () => {
+        let ans = -1;
+        ans = Add("//[***][,,,]\n1***2,,,3");
+        expect(ans).toBe(6);
+    })
+
+    test('Test 9.2', () => {
+        let ans = -1;
+        ans = Add("//[***][,,,][%%]\n1***2,,,3%%4");
+        expect(ans).toBe(10);
+    })
+
 });
