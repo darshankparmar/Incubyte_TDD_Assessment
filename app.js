@@ -19,6 +19,10 @@ function Add(str) {
 
     if(str[0] === '/' && str[1] === '/') strArr = strArr.slice(1);
 
+    for(let i = 0; i < strArr.length; i++) {
+        if(parseInt(strArr[i]) >= 1000) strArr[i] = '0';
+    }
+
     return strArr.reduce((total, sum) => { return parseFloat(total) + parseFloat(sum) }, 0);
 }
 

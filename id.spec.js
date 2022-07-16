@@ -61,6 +61,11 @@ describe('its working', () => {
         expect(ans).toBe("negative number not allowed");
     })
 
-    
+    // Test 6 : Numbers bigger than 1000 should be ignored, so adding 2 + 1001 = 2Numbers bigger than 1000 should be ignored, so adding 2 + 1001 = 2
+    test('Test 6.1', () => {
+        let ans = -1;
+        ans = Add("1,2\n2,3000");
+        expect(ans).toBe(5);
+    })
 
 });
