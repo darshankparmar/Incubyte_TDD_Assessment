@@ -47,4 +47,12 @@ describe('its working', () => {
         expect(ans).toBe("The following input is not okay");
     })
 
+    // Test 4 : Support different delimiters
+    test('Test 4.1', () => {
+        let ans = -1;
+        ans = Add("//;1;2");
+        expect(ans).toBe(3);
+    })
+
+    
 });

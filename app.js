@@ -6,7 +6,13 @@ function Add(str) {
 
     str = str.replace("\n", ",");
 
-    let strArr = str.split(",");
+    var delimiter = ',';
+
+    if(str[0] == '/' && str[1] == '/') delimiter = str[2];
+
+    let strArr = str.split(delimiter);
+
+    if(str[0] === '/' && str[1] === '/') strArr = strArr.slice(1);
 
     return strArr.reduce((total, sum) => { return parseFloat(total) + parseFloat(sum) }, 0);
 }
