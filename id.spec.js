@@ -21,4 +21,17 @@ describe('its working', () => {
         expect(ans).toBe(0);
     })
 
+    // Test 2 : Allow the Add method to handle an unknown amount of numbers
+    test('Test 2.1', () => {
+        let ans = -1;
+        ans = Add("1,2,3,4,5,6,7,8,9,10");
+        expect(ans).toBe(55);
+    })
+
+    test('Test 2.2', () => {
+        let ans = -1;
+        ans = Add("1,2,5,3");
+        expect(ans).toBe(11);
+    })
+
 });
